@@ -1,97 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeopardy</title>
-    <link rel="stylesheet" href="styles-jan.css"/>
-    <h1>Round One</h1>
-  </head>
-  <body>
- 
-    <h2>Player Turn</h2>
-    <table>
-      <tr> 
-        <td>Nature</td>
-        <td>Animals</td> 
-        <td>Computers</td>
-        <td>Mythology</td>
-        <td>History</td>
-        <td>General</td>
-        
-      </tr>
-      <tr>
-        <td> <a href = '# '>100</a></td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
+    <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Jeopardy</title>
+          <link rel="stylesheet" href="styles-jan.css"/>
+          <h1>Round One</h1>
+        </head>
+        <body>
+       
+          <h2>Player Turn</h2>
+          <table>
+            <tr> 
+              <td>Nature</td>
+              <td>Animals</td> 
+              <td>Computers</td>
+              <td>Mythology</td>
+              <td>History</td>
+              <td>General</td>
+            </tr>
+            <tr>
+              <td><a href='#'>100</a></td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>200</td>
+              <td>200</td> 
+              <td>200</td>
+              <td>200</td>
+              <td>200</td>
+              <td>200</td>
+              
+            </tr>
+            <tr>
+              <td>300</td>
+              <td>300</td> 
+              <td>300</td>
+              <td>300</td>
+              <td>300</td>
+              <td>300</td>
+              
+            </tr>
+            <tr>
+              <td>400</td>
+              <td>400</td> 
+              <td>400</td>
+              <td>400</td>
+              <td>400</td>
+              <td>400</td>
+              </tr>
+            <tr>
+              <td>500</td>
+              <td>500</td> 
+              <td>500</td>
+              <td>500</td>
+              <td>500</td>
+              <td>500</td>
+            </tr>
+          </table>
+          
+          
+          <div class="answer-form">
+            <form id="answer-form">
+              <label for="answer-input">Enter your answer:</label>
+              <input type="text" id="answer-input" name="answer" required>
+              <button type="submit">Submit</button>
+              <button type="button" onclick="pass()">Pass</button> <!-- Assuming you have a function pass() defined in your JavaScript -->
+            </form>
+          </div>
+          <a href="round-two-jan.html">
+            <div>
+              <button class="next-round-button">Next Round</button>
+            </div>
       
-      </tr>
-      <tr>
-        <td>200</td>
-        <td>200</td> 
-        <td>200</td>
-        <td>200</td>
-        <td>200</td>
-        <td>200</td>
-        
-      </tr>
-      <tr>
-        <td>300</td>
-        <td>300</td> 
-        <td>300</td>
-        <td>300</td>
-        <td>300</td>
-        <td>300</td>
-        
-      </tr>
-      <tr>
-        <td>400</td>
-        <td>400</td> 
-        <td>400</td>
-        <td>400</td>
-        <td>400</td>
-        <td>400</td>
-        
-      </tr>
-      <tr>
-        <td>500</td>
-        <td>500</td> 
-        <td>500</td>
-        <td>500</td>
-        <td>500</td>
-        <td>500</td>
-      </tr>
-    </table>
-    
-
-     <div class="button">
-      <input type="text"/>
-      <button>GUESS</button>
-      <button>PASS</button>  
-      <button class="next-round-button">Next Round</button>
-     </div>
-
-     <p class="'score">SCORE<span class='score-count'></span></p>
-    <!-- <div>
-      <div class="player-score-1">Player 1 Score: 0
-
-        <div class="player-score-2">Player 2 Score: 0
-
-    </div> -->
-   
-    <script src="index.js" type="module"></script>
-    <a href="Round-two-jan.html">
-      <div>
-        <!-- <button class="next-round-button">Next Round</button> -->
-      </div>
-    
-   
-        
-    
-
+          <p class="score">SCORE :<span class="score-count"></span></p>
+      
+          <script src="index.js" type="module"></script>
+          <footer>
+            Copyright 2013 Jeopardy
+          </footer>
+        </body>
+      </html>
     
   
   
@@ -103,4 +96,4 @@
   </div>
   </body>
   <footer>Copyright 2013 Jeopardy</footer>
-</html>
+</html> 

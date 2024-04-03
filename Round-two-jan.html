@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <iframe width="300" height="450" style="border: 0" allowfullscreen="" loading="lazy" class="map"><meta name="viewport" content="width=device-width, initial-scale=1.0"></iframe> -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,12 +13,12 @@
     <h2>Player Turn</h2>
     <table>
       <tr>
-        <td>Catergory</td>
-        <td>Category</td> 
-        <td>Category</td>
-        <td>Category</td>
-        <td>Category</td>
-        <td>Category</td>
+        <td>Nature</td>
+        <td>Animals</td> 
+        <td>Computers</td>
+        <td>Mythology</td>
+        <td>History</td>
+        <td>General</td>
       </tr>
       <tr>
         <td>100</td>
@@ -67,27 +66,21 @@
         
       </tr>
     </table>
-    <input type="text"/>
+    <div class="answer-form">
+      <form id="answer-form">
+        <label for="answer-input">Enter your answer:</label>
+        <input type="text" id="answer-input" name="answer" required>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="pass()">Pass</button> <!-- Assuming you have a function pass() defined in your JavaScript -->
+      </form>
+  
    
-    <div class="button">
-      
-      <button>GUESS</button>
-      <button>PASS</button>  
-
-      
-    </div>
-    <div>
-      <div class="player-score-1">Player 1 Score: 0
-
-        <div class="player-score-2">Player 2 Score: 0
-
-    </div>
-
     <script src="./scripts/index.js" type="module"></script>
-    <a href="final-jan.html">
+    <a href="final-jan.html"></a>
     <div>
-      <button class="next-round-button-2">Next Round</button>
+      <button class="finalRoundButton">Final Round</button>
     </div>
+    <p class="score">SCORE :<span class="score-count"></span></p>
  
   </body>
   <div>
@@ -100,4 +93,100 @@
 <script src="index.js" type="module"></script>
 <script src="placeholder-questions.js"></script>
   </body>
+</html> 
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeopardy</title>
+    <link rel="stylesheet" href="styles-jan.css"/>
+    <h1>Round Two</h1>
+  </head>
+  <body>
+ 
+    <h2>Player Turn</h2>
+    <table>
+      <tr> 
+        <td>Nature</td>
+        <td>Animals</td> 
+        <td>Computers</td>
+        <td>Mythology</td>
+        <td>History</td>
+        <td>General</td>
+      </tr>
+      <tr>
+        <td><a href='#'>100</a></td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>200</td>
+        <td>200</td> 
+        <td>200</td>
+        <td>200</td>
+        <td>200</td>
+        <td>200</td>
+        
+      </tr>
+      <tr>
+        <td>300</td>
+        <td>300</td> 
+        <td>300</td>
+        <td>300</td>
+        <td>300</td>
+        <td>300</td>
+        
+      </tr>
+      <tr>
+        <td>400</td>
+        <td>400</td> 
+        <td>400</td>
+        <td>400</td>
+        <td>400</td>
+        <td>400</td>
+        </tr>
+      <tr>
+        <td>500</td>
+        <td>500</td> 
+        <td>500</td>
+        <td>500</td>
+        <td>500</td>
+        <td>500</td>
+      </tr>
+    </table>
+    
+    
+    <div class="answer-form">
+      <form id="answer-form">
+        <label for="answer-input">Enter your answer:</label>
+        <input type="text" id="answer-input" name="answer" required>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="pass()">Pass</button> <!-- Assuming you have a function pass() defined in your JavaScript -->
+      <!-- </form>
+    </div>
+
+    <p class="score">SCORE<span class="score-count"></span></p>
+
+    <script src="index.js" type="module"></script>
+    <footer>
+      Copyright 2013 Jeopardy
+    </footer>
+  </body>
 </html>
+
+
+
+
+
+
+<script src="index.js" type="module"></script>
+<script src="./placeholder-questions.js"></script>
+</div>
+</body>
+<footer>Copyright 2013 Jeopardy</footer>
+</html>  
