@@ -1,5 +1,4 @@
 import placeholderQuestions from "./placeholder-questions.js";
-console.log(placeholderQuestions);
 
 let guessButton = document.getElementById("guessButton");
 let passButton = document.getElementById("passButton");
@@ -28,6 +27,73 @@ let historyCategory = placeholderQuestions.filter(
 let generalCategory = placeholderQuestions.filter(
   (question) => question.category === "General"
 );
+// create event listener that when i click on card it pulls one question specific category variable
+// function  check the id if the id says nature run natureCategory else give me category that matches name of id. || this is the first function we call in event listener, second function gives random question from category
+function giveRandomQuestion(questionsArr) {
+  let maxBound = questionsArr.length - 1;
+  let randomIndex = Math.floor(Math.random() * maxBound);
+  return questionsArr[randomIndex];
+}
+const Nature100 = document.getElementById("Nature-100");
+Nature100.addEventListener("click", (e) => {
+  Nature100.textContent = giveRandomQuestion(natureCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Nature200 = document.getElementById("Nature-200");
+Nature200.addEventListener("click", (e) => {
+  Nature200.textContent = giveRandomQuestion(natureCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Nature300 = document.getElementById("Nature-300");
+Nature300.addEventListener("click", (e) => {
+  Nature300.textContent = giveRandomQuestion(natureCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Nature400 = document.getElementById("Nature-400");
+Nature400.addEventListener("click", (e) => {
+  Nature400.textContent = giveRandomQuestion(natureCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Nature500 = document.getElementById("Nature-500");
+Nature500.addEventListener("click", (e) => {
+  Nature500.textContent = giveRandomQuestion(natureCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Animals100 = document.getElementById("Animals-100");
+Animals100.addEventListener("click", (e) => {
+  Animals100.textContent = giveRandomQuestion(animalCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Animals200 = document.getElementById("Animals-200");
+Animals200.addEventListener("click", (e) => {
+  Animals200.textContent = giveRandomQuestion(animalCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Animals300 = document.getElementById("Animals-300");
+Animals300.addEventListener("click", (e) => {
+  Animals300.textContent = giveRandomQuestion(animalCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Animals400 = document.getElementById("Animals-400");
+Animals400.addEventListener("click", (e) => {
+  Animals400.textContent = giveRandomQuestion(animalCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Animals500 = document.getElementById("Animals-500");
+Animals500.addEventListener("click", (e) => {
+  Animals500.textContent = giveRandomQuestion(animalCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Computers100 = document.getElementById("Computers-100");
+Computers100.addEventListener("click", (e) => {
+  Computers100.textContent = giveRandomQuestion(computersCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const Computers200 = document.getElementById("Computers-200");
+Computers200.addEventListener("click", (e) => {
+  Computers200.textContent = giveRandomQuestion(computersCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
 
 jeopardyQuestions = [
   // Your jeopardy questions array
