@@ -1,6 +1,7 @@
 //TODO
 /**
  * make a way for user to view question on card
+ * function called card flip that uses inner text to change text on card
  * allow input for answer
  * add functionality and enable SUBMIT and PASS button
  *  !submit
