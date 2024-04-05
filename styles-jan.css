@@ -1,9 +1,4 @@
-iframe {
-    width: 300px;
-  height: 450px;
-    overflow-clip-margin: content-box !important;
-    overflow: clip !important;
-}
+
 body {
   display: flex;
   flex-direction: column;
@@ -11,7 +6,7 @@ body {
   justify-content: space-between;
   color:blue
  }
-/* //changed color */
+
 .round-one-header {
   text-align: center;
   margin-bottom:x;
@@ -41,19 +36,23 @@ h2 {
   text-align: center;
 }
 table{
-    width: 95%;
-    text-align: center;
-    border: 1px solid;
-    margin: auto;
+  cursor: pointer;
+  border: 1px solid #110b64;
+  padding: 10px;
+  margin: 5px;
+  width: 100px;
+  text-align: center;
+     width: 95%;
+     display: table-footer-group
+    /* text-align: center;
+    border: 10px solid;
+    margin: auto; */ */
 }
-th{
-    height: 200px;
-}
+
 td {
   border: 1px solid;
   margin: auto;
   ;
-  /* margin-bottom: -90px; */
 }
 
 .button {
@@ -95,8 +94,8 @@ input{
 }
 
 .footer-2{
-    display: flex;
-margin-left: -450px;
+  text-align: center;
+  padding-top: 100px;
 
 }
 
@@ -107,7 +106,7 @@ footer {
 }   
 .final-category{
     text-align: center;
-    width: 50vw;
+    width: 500vw;
     height: 5vw;
     margin-bottom: 10px;
 
@@ -115,15 +114,7 @@ footer {
 
 .final-question{
     text-align: center;
-    width: 50vw;
+    width: 100vw;
     height: 20vw;
     color: blue;
 }
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 15vw;
-    margin-bottom: 10px;
-    }

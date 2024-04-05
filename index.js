@@ -34,6 +34,10 @@ function giveRandomQuestion(questionsArr) {
   let randomIndex = Math.floor(Math.random() * maxBound);
   return questionsArr[randomIndex];
 }
+const Final = document.getElementById("final-question");
+Final.addEventListener("click", (e) => {
+  Final.textContent = giveRandomQuestion(finalCategory).question;
+});
 const Nature100 = document.getElementById("Nature-100");
 Nature100.addEventListener("click", (e) => {
   Nature100.textContent = giveRandomQuestion(natureCategory).question;
@@ -204,18 +208,18 @@ document
     }
   });
 
-function disableButtonsForGuessing() {
-  let submitButton = document.querySelector(
-    '#answer-form button[type="submit"]'
-  );
-  let passButton = document.querySelector('.answer-form button[type="button"]');
-  let nextRoundButton = document.querySelector(".next-round-button");
+// function disableButtonsForGuessing() {
+//   let submitButton = document.querySelector(
+//     '#answer-form button[type="submit"]'
+//   );
+//   let passButton = document.querySelector('.answer-form button[type="button"]');
+//   let nextRoundButton = document.querySelector(".next-round-button");
 
-  submitButton.disabled = true;
-  passButton.disabled = true;
-  nextRoundButton.disabled = true;
-}
-disableButtonsForGuessing();
+//   submitButton.disabled = true;
+//   passButton.disabled = true;
+//   nextRoundButton.disabled = true;
+// }
+// disableButtonsForGuessing();
 
 async function player1Guess() {
   // Your logic here...
