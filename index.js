@@ -140,13 +140,13 @@ History100.addEventListener("click", (e) => {
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
 const History200 = document.getElementById("History-200");
-History2000.addEventListener("click", (e) => {
+History200.addEventListener("click", (e) => {
   History200.textContent = giveRandomQuestion(historyCategory).question;
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
 const History300 = document.getElementById("History-300");
-History200.addEventListener("click", (e) => {
-  History200.textContent = giveRandomQuestion(historyCategory).question;
+History300.addEventListener("click", (e) => {
+  History300.textContent = giveRandomQuestion(historyCategory).question;
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
 const History400 = document.getElementById("History-400");
@@ -154,17 +154,37 @@ History400.addEventListener("click", (e) => {
   History400.textContent = giveRandomQuestion(historyCategory).question;
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
-const History200 = document.getElementById("Mythology-500");
-History200.addEventListener("click", (e) => {
-  History200.textContent = giveRandomQuestion(mythologyCategory).question;
+const History500 = document.getElementById("History-500");
+History500.addEventListener("click", (e) => {
+  History500.textContent = giveRandomQuestion(historyCategory).question;
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
-// jeopardyQuestions = [
-//   // Your jeopardy questions array
-// ];
+const General100 = document.getElementById("General-100");
+General100.addEventListener("click", (e) => {
+  General100.textContent = giveRandomQuestion(generalCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const General200 = document.getElementById("General-200");
+General200.addEventListener("click", (e) => {
+  General200.textContent = giveRandomQuestion(historyCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const General300 = document.getElementById("General-300");
+General300.addEventListener("click", (e) => {
+  General300.textContent = giveRandomQuestion(historyCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const General400 = document.getElementById("General-400");
+General400.addEventListener("click", (e) => {
+  General400.textContent = giveRandomQuestion(historyCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
+const General500 = document.getElementById("General-500");
+General500.addEventListener("click", (e) => {
+  General500.textContent = giveRandomQuestion(historyCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
 
-// console.log(jeopardyQuestions[0].question);
-// // Function to handle form submission
 document
   .getElementById("answer-form")
   .addEventListener("submit", function (event) {
