@@ -5,13 +5,7 @@ let passButton = document.getElementById("passButton");
 let nextRoundButton = document.getElementById("nextRound");
 const cards = document.getElementById("interact-cards");
 let answerText = document.getElementById("answerText");
-// let test = document.getElementById("test");
-// test.addEventListener("click", () => {
-//   test.textContent = "SPAM and test";
-// });
-let finalCategory = placeholderQuestions.filter(
-  (question) => question.category === "Final"
-);
+
 let natureCategory = placeholderQuestions.filter(
   (question) => question.category === "Nature"
 );
@@ -30,6 +24,9 @@ let historyCategory = placeholderQuestions.filter(
 let generalCategory = placeholderQuestions.filter(
   (question) => question.category === "General"
 );
+let finalCategory = placeholderQuestions.filter(
+  (question) => question.category === "Final"
+);
 // create event listener that when i click on card it pulls one question specific category variable
 // function  check the id if the id says nature run natureCategory else give me category that matches name of id. || this is the first function we call in event listener, second function gives random question from category
 function giveRandomQuestion(questionsArr) {
@@ -37,7 +34,11 @@ function giveRandomQuestion(questionsArr) {
   let randomIndex = Math.floor(Math.random() * maxBound);
   return questionsArr[randomIndex];
 }
-
+const final = document.getElementById("final-question");
+final.addEventListener("click", (e) => {
+  final.textContent = giveRandomQuestion(finalCategory).question;
+  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+});
 const Nature100 = document.getElementById("Nature-100");
 Nature100.addEventListener("click", (e) => {
   Nature100.textContent = giveRandomQuestion(natureCategory).question;
@@ -208,22 +209,33 @@ document
     }
   });
 
-// function disableButtonsForGuessing() {
-//   let submitButton = document.querySelector(
-//     '#answer-form button[type="submit"]'
-//   );
-//   let passButton = document.querySelector('.answer-form button[type="button"]');
-//   let nextRoundButton = document.querySelector(".next-round-button");
+function disableButtonsForGuessing() {
+  let submitButton = document.querySelector(
+    '#answer-form button[type="submit"]'
+  );
+  let passButton = document.querySelector('.answer-form button[type="button"]');
+  let nextRoundButton = document.querySelector(".next-round-button");
 
-//   submitButton.disabled = true;
-//   passButton.disabled = true;
-//   nextRoundButton.disabled = true;
-// }
-// disableButtonsForGuessing();
-
-async function player1Guess() {
-  // Your logic here...
+  submitButton.disabled = true;
+  passButton.disabled = true;
+  nextRoundButton.disabled = true;
 }
+disableButtonsForGuessing();
+
+let currentPlayer = 1;
+let scores = { player1: 0, player2: 0 };
+
+function switchPlayer() {
+  if (currentPlayer === 1) {
+    currentPlayer = 2;
+  } else {
+    currentPlayer = 1;
+  }
+  document.getElementById(
+    "player-turn"
+  ).innerText = `Player ${currentPlayer}'s Turn`;
+}
+switchPlayer();
 // window.onload = function () {
 //   document.getElementById("switchPlayers1").textContent =
 //     "Player 1 Please pick a card";

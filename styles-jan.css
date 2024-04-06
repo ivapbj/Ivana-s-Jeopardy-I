@@ -1,4 +1,4 @@
-/* body {
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
 
 .round-one-header {
   text-align: center;
-  margin-bottom:x;
+  margin: bottom 100px;;
   color: blue
 }
 img {
@@ -112,8 +112,8 @@ footer {
     width: 100vw;
     height: 20vw;
     color: blue;
-} */
-
+}
+/* 
 body {
   display: flex;
   flex-direction: column;
@@ -226,4 +226,4 @@ footer {
     width: 100vw;
     height: 20vw;
     color: blue;
-}
+} */
