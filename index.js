@@ -34,11 +34,11 @@ function giveRandomQuestion(questionsArr) {
   let randomIndex = Math.floor(Math.random() * maxBound);
   return questionsArr[randomIndex];
 }
-const final = document.getElementById("final-question");
-final.addEventListener("click", (e) => {
-  final.textContent = giveRandomQuestion(finalCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
-});
+// const final = document.getElementById("final-question");
+// final.addEventListener("click", (e) => {
+//   final.textContent = giveRandomQuestion(finalCategory).question;
+//   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+// });
 const Nature100 = document.getElementById("Nature-100");
 Nature100.addEventListener("click", (e) => {
   Nature100.textContent = giveRandomQuestion(natureCategory).question;
@@ -236,10 +236,10 @@ function switchPlayer() {
   ).innerText = `Player ${currentPlayer}'s Turn`;
 }
 switchPlayer();
-// window.onload = function () {
-//   document.getElementById("switchPlayers1").textContent =
-//     "Player 1 Please pick a card";
-//   guessButton.disabled = true;
-//   disableButtons();
-// };
+window.onload = function () {
+  document.getElementById("switchPlayers1").textContent =
+    "Player 1 Please pick a card";
+  guessButton.disabled = true;
+  disableButtons();
+};
 export default placeholderQuestions;
