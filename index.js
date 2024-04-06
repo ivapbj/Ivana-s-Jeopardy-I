@@ -5,7 +5,10 @@ let passButton = document.getElementById("passButton");
 let nextRoundButton = document.getElementById("nextRound");
 const cards = document.getElementById("interact-cards");
 let answerText = document.getElementById("answerText");
-
+// let test = document.getElementById("test");
+// test.addEventListener("click", () => {
+//   test.textContent = "SPAM and test";
+// });
 let finalCategory = placeholderQuestions.filter(
   (question) => question.category === "Final"
 );
@@ -34,10 +37,7 @@ function giveRandomQuestion(questionsArr) {
   let randomIndex = Math.floor(Math.random() * maxBound);
   return questionsArr[randomIndex];
 }
-const Final = document.getElementById("final-question");
-Final.addEventListener("click", (e) => {
-  Final.textContent = giveRandomQuestion(finalCategory).question;
-});
+
 const Nature100 = document.getElementById("Nature-100");
 Nature100.addEventListener("click", (e) => {
   Nature100.textContent = giveRandomQuestion(natureCategory).question;
@@ -224,10 +224,10 @@ document
 async function player1Guess() {
   // Your logic here...
 }
-window.onload = function () {
-  document.getElementById("switchPlayers1").textContent =
-    "Player 1 Please pick a card";
-  guessButton.disabled = true;
-  disableButtons();
-};
+// window.onload = function () {
+//   document.getElementById("switchPlayers1").textContent =
+//     "Player 1 Please pick a card";
+//   guessButton.disabled = true;
+//   disableButtons();
+// };
 export default placeholderQuestions;
