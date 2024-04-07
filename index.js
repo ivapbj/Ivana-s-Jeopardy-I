@@ -1,6 +1,6 @@
 import placeholderQuestions from "./placeholder-questions.js";
 
-let guessButton = document.getElementById("guessButton");
+let submitButton = document.getElementById("submitButton");
 let passButton = document.getElementById("passButton");
 let nextRoundButton = document.getElementById("nextRound");
 let answerText = document.getElementById("answerText");
@@ -41,147 +41,147 @@ Nature100.addEventListener("click", (e) => {
 const Nature200 = document.getElementById("Nature-200");
 Nature200.addEventListener("click", (e) => {
   Nature200.textContent = giveRandomQuestion(natureCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Nature300 = document.getElementById("Nature-300");
 Nature300.addEventListener("click", (e) => {
   Nature300.textContent = giveRandomQuestion(natureCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Nature400 = document.getElementById("Nature-400");
 Nature400.addEventListener("click", (e) => {
   Nature400.textContent = giveRandomQuestion(natureCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Nature500 = document.getElementById("Nature-500");
 Nature500.addEventListener("click", (e) => {
   Nature500.textContent = giveRandomQuestion(natureCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Animals100 = document.getElementById("Animals-100");
 Animals100.addEventListener("click", (e) => {
   Animals100.textContent = giveRandomQuestion(animalsCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Animals200 = document.getElementById("Animals-200");
 Animals200.addEventListener("click", (e) => {
   Animals200.textContent = giveRandomQuestion(animalsCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Animals300 = document.getElementById("Animals-300");
 Animals300.addEventListener("click", (e) => {
   Animals300.textContent = giveRandomQuestion(animalsCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Animals400 = document.getElementById("Animals-400");
 Animals400.addEventListener("click", (e) => {
   Animals400.textContent = giveRandomQuestion(animalsCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Animals500 = document.getElementById("Animals-500");
 Animals500.addEventListener("click", (e) => {
   Animals500.textContent = giveRandomQuestion(animalsCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Computers100 = document.getElementById("Computers-100");
 Computers100.addEventListener("click", (e) => {
   Computers100.textContent = giveRandomQuestion(computersCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Computers200 = document.getElementById("Computers-200");
 Computers200.addEventListener("click", (e) => {
   Computers200.textContent = giveRandomQuestion(computersCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Computers300 = document.getElementById("Computers-300");
 Computers300.addEventListener("click", (e) => {
   Computers300.textContent = giveRandomQuestion(computersCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Computers400 = document.getElementById("Computers-400");
 Computers400.addEventListener("click", (e) => {
   Computers400.textContent = giveRandomQuestion(computersCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Computers500 = document.getElementById("Computers-500");
 Computers500.addEventListener("click", (e) => {
   Computers500.textContent = giveRandomQuestion(computersCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Mythology100 = document.getElementById("Mythology-100");
 Mythology100.addEventListener("click", (e) => {
   Mythology100.textContent = giveRandomQuestion(mythologyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Mythology200 = document.getElementById("Mythology-200");
 Mythology200.addEventListener("click", (e) => {
   Mythology200.textContent = giveRandomQuestion(mythologyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Mythology300 = document.getElementById("Mythology-300");
 Mythology300.addEventListener("click", (e) => {
   Mythology300.textContent = giveRandomQuestion(mythologyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Mythology400 = document.getElementById("Mythology-400");
 Mythology400.addEventListener("click", (e) => {
   Mythology400.textContent = giveRandomQuestion(mythologyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Mythology500 = document.getElementById("Mythology-500");
 Mythology500.addEventListener("click", (e) => {
   Mythology500.textContent = giveRandomQuestion(mythologyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const History100 = document.getElementById("History-100");
 History100.addEventListener("click", (e) => {
   History100.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const History200 = document.getElementById("History-200");
 History200.addEventListener("click", (e) => {
   History200.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const History300 = document.getElementById("History-300");
 History300.addEventListener("click", (e) => {
   History300.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const History400 = document.getElementById("History-400");
 History400.addEventListener("click", (e) => {
   History400.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const History500 = document.getElementById("History-500");
 History500.addEventListener("click", (e) => {
   History500.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const General100 = document.getElementById("General-100");
 General100.addEventListener("click", (e) => {
   General100.textContent = giveRandomQuestion(generalCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const General200 = document.getElementById("General-200");
 General200.addEventListener("click", (e) => {
   General200.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const General300 = document.getElementById("General-300");
 General300.addEventListener("click", (e) => {
   General300.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const General400 = document.getElementById("General-400");
 General400.addEventListener("click", (e) => {
   General400.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const General500 = document.getElementById("General-500");
 General500.addEventListener("click", (e) => {
   General500.textContent = giveRandomQuestion(historyCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 
 // Enable button when any category is clicked
@@ -200,7 +200,7 @@ function submitAnswer() {
   const correctAnswer = placeholderQuestions.find(
     (q) =>
       q.question.toLowerCase() ===
-      document.getElementById("question").innerText.toLowerCase()
+      document.getElementById("submitButton").innerText.toLowerCase()
   ).answer.toLowerCase;
   console.log("correct answer: " + correctAnswer);
   let guesses = 0;
@@ -224,10 +224,12 @@ function submitAnswer() {
       document.getElementById("answer").value = "";
       document.getElementById("question-container").style.display = "none";
       document.getElementById("categories").style.display = "flex";
+      // document.getElementById("sumbitButton");
     }
     alert(`Incorrect Answer`);
   }
 }
+submitAnswer();
 //check if the user's answer  matches the correct answer
 // Validate and process the answer
 
