@@ -3,7 +3,8 @@ import placeholderQuestions from "./placeholder-questions.js";
 let guessButton = document.getElementById("guessButton");
 let passButton = document.getElementById("passButton");
 let nextRoundButton = document.getElementById("nextRound");
-const cards = document.getElementById("interact-cards");
+const game = document.getElementById("game");
+const scoreDisplay = document.getElementById("score");
 let answerText = document.getElementById("answerText");
 
 let natureCategory = placeholderQuestions.filter(
@@ -190,6 +191,7 @@ const General500 = document.getElementById("General-500");
 General500.addEventListener("click", (e) => {
   General500.textContent = giveRandomQuestion(historyCategory).question;
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  if (placeholderQuestions)
 });
 
 //function to handle the submission of an answer

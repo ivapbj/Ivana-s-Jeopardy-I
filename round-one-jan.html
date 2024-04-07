@@ -9,6 +9,8 @@
   </head>
   <body>
     <h1>ROUND ONE</h1>
+    <div id="game"></div>
+    <h2>SCORE :<span id="score"></span></h2>
     <div class="player-turn" id="player-turn">
       <p>PLAYER ONE'S TURN</p>
     </div>
@@ -71,15 +73,15 @@
       <form id="answer-form">
         <label for="answer-input">Enter your answer:</label>
         <input type="text" id="answer-input" name="answer" placeholder="Type answer here"/>
-        <button id="submitButton" disabled type="button" onclick="submitAnswer()">Submit</button>
+        <button id="submitButton" disabled type="submit" value ="Submit" onclick="submitAnswer()">Submit</button>
         <button id="passButton" disabled type="button" onclick="pass()">Pass</button> 
         <div>
           <a href="round-two-jan.html">
            <button id="nextRound" disabled type="nextRound">Round Two <a href="round-two-jan.html"></a></button>
-        <!-- </div> -->
+    
         
   
-     <p class="score">SCORE :<span class="score-count"></span></p>
+    
 
     <script src="index.js" type="module"></script>
    <script src="./placeholder-questions.js"></script>

@@ -192,46 +192,51 @@ function enableButtonsForGuessing() {
 }
 
 //function to handle the submission of an answer
-function submitAnswer() {
-  //grab the user's answer
-  const userAnswer = document.getElementById("answer-input").value.LowerCase();
-  // find the correct answer based on the current question displayed
-  const correctAnswer = placeholderQuestions.find(
-    (q) =>
-      q.question.toLowerCase() ===
-      document.getElementById("answer-input").innerText.toLowerCase()
-  ).answer.toLowerCase;
-  alert("Button clicked!");
-  document
-    .getElementById("submitButton")
-    .addEventListener("click, (e) => {
-      submitAnswer");
-
-  let guesses = 0;
-  if (userAnswer === correctAnswer) {
-    alert("Correct Answer");
-    //increment the score of the player
-    scores[`players${currentPlayer}`] += 1;
-    //update the display score
-    document.getElementById("player" + currentPlayer + "-score").innerText =
-      scores["player" + currentPlayer];
-    guesses = 0;
-  } else {
-    console.log("false user answer: " + userAnswer);
-    scores[`players${currentPlayer}`] -= 1;
-    //give alert for an incorrect answer
-    guesses++;
-    switchPlayer();
-    if (guesses == 2) {
-      guesses = 0;
-      document.getElementById("answer").value = "";
-      document.getElementById("question-container").style.display = "none";
-      document.getElementById("categories").style.display = "flex";
-      // document.getElementById("sumbitButton");
-    }
-    alert(`Incorrect Answer`);
-  }
+function submitAnswer(event) {
+  event.preventDefault();
+  console.log(placeholderQuestions);
 }
+let form = document.getElementById("answer-form");
+form.addEventListener("submitButton", submitAnswer);
+//grab the user's answer
+const userAnswer = document.getElementById("answer-input").value.LowerCase();
+// // find the correct answer based on the current question displayed
+// const correctAnswer = placeholderQuestions.find(
+//   (q) =>
+//     q.question.toLowerCase() ===
+//     document.getElementById("answer-input").innerText.toLowerCase()
+// ).answer.toLowerCase;
+// alert("Button clicked!");
+// document
+//   .getElementById("submitButton")
+//   .addEventListener("click, (e) => {
+//     submitAnswer");
+
+let guesses = 0;
+if (submitAnswer === correctAnswer) {
+  alert("Correct Answer");
+  //increment the score of the player
+  scores[`players${currentPlayer}`] += 1;
+  //update the display score
+  document.getElementById("player" + currentPlayer + "-score").innerText =
+    scores["player" + currentPlayer];
+  guesses = 0;
+} else {
+  console.log("false user answer: " + userAnswer);
+  scores[`players${currentPlayer}`] -= 1;
+  //give alert for an incorrect answer
+  guesses++;
+  switchPlayer();
+  if (guesses == 2) {
+    guesses = 0;
+    document.getElementById("answer").value = "";
+    document.getElementById("question-container").style.display = "none";
+    document.getElementById("categories").style.display = "flex";
+    // document.getElementById("sumbitButton");
+  }
+  alert(`Incorrect Answer`);
+}
+
 submitAnswer();
 //check if the user's answer  matches the correct answer
 // Validate and process the answer
