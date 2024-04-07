@@ -3,7 +3,6 @@ import placeholderQuestions from "./placeholder-questions.js";
 let guessButton = document.getElementById("guessButton");
 let passButton = document.getElementById("passButton");
 let nextRoundButton = document.getElementById("nextRound");
-const cards = document.getElementById("interact-cards");
 let answerText = document.getElementById("answerText");
 
 let natureCategory = placeholderQuestions.filter(
@@ -34,16 +33,10 @@ function giveRandomQuestion(questionsArr) {
   let randomIndex = Math.floor(Math.random() * maxBound);
   return questionsArr[randomIndex];
 }
-// const final = document.getElementById("final-question");
-// console.log(final);
-// final.addEventListener("click", (e) => {
-//   final.textContent = giveRandomQuestion(finalCategory).question;
-//   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
-// });
 const Nature100 = document.getElementById("Nature-100");
 Nature100.addEventListener("click", (e) => {
   Nature100.textContent = giveRandomQuestion(natureCategory).question;
-  //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
+  enableButtonsForGuessing();
 });
 const Nature200 = document.getElementById("Nature-200");
 Nature200.addEventListener("click", (e) => {
@@ -191,8 +184,16 @@ General500.addEventListener("click", (e) => {
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
 
+// Enable button when any category is clicked
+function enableButtonsForGuessing() {
+  submitButton.disabled = false;
+  passButton.disabled = false;
+  nextRoundButton.disabled = false;
+}
+
 //function to handle the submission of an answer
 function submitAnswer() {
+  console.log("fire");
   //grab the user's answer
   const userAnswer = document.getElementById("answer").value.LowerCase();
   // find the correct answer based on the current question displayed
@@ -201,46 +202,46 @@ function submitAnswer() {
       q.question.toLowerCase() ===
       document.getElementById("question").innerText.toLowerCase()
   ).answer.toLowerCase;
+  console.log("correct answer: " + correctAnswer);
+  let guesses = 0;
+  if (userAnswer === correctAnswer) {
+    console.log("true user answer: " + userAnswer);
+    alert("Correct Answer");
+    //increment the score of the player
+    scores[`players${currentPlayer}`] += 1;
+    //update the display score
+    document.getElementById("player" + currentPlayer + "-score").innerText =
+      scores["player" + currentPlayer];
+    guesses = 0;
+  } else {
+    console.log("false user answer: " + userAnswer);
+    scores[`players${currentPlayer}`] -= 1;
+    //give alert for an incorrect answer
+    guesses++;
+    switchPlayer();
+    if (guesses == 2) {
+      guesses = 0;
+      document.getElementById("answer").value = "";
+      document.getElementById("question-container").style.display = "none";
+      document.getElementById("categories").style.display = "flex";
+    }
+    alert(`Incorrect Answer`);
+  }
 }
 //check if the user's answer  matches the correct answer
-if (userAnswer === correctAnswer) {
-  alert("Correct Answer");
-  //increment the score of the player
-  scores[`players${currentPlayer}`] += 1;
-  //update the display score
-  document.getElementById("player" + currentPlayer + "-score").innerText =
-    scores["player" + currentPlayer];
-} else {
-  //give alert for an incorrect answer
-  alert(`Incorrect Answer`);
-}
-
 // Validate and process the answer
 
-if (validateAnswer(answer)) {
-  // Update score
-  updateScore(100); // For example, if the answer is correct, add 100 points
-  // Clear the input field
-  document.getElementById("answer-input").value = "";
-  // Optionally, load a new question
-  // loadQuestion();
-} else {
-  // Handle incorrect answer
-  alert("Incorrect answer! Try again.");
-}
-
-function disableButtonsForGuessing() {
-  let submitButton = document.querySelector(
-    '#answer-form button[type="submit"]'
-  );
-  let passButton = document.querySelector('.answer-form button[type="button"]');
-  let nextRoundButton = document.querySelector(".next-round-button");
-
-  submitButton.disabled = true;
-  passButton.disabled = true;
-  nextRoundButton.disabled = true;
-}
-disableButtonsForGuessing();
+// if (validateAnswer(answer)) {
+//   // Update score
+//   updateScore(100); // For example, if the answer is correct, add 100 points
+//   // Clear the input field
+//   document.getElementById("answer-input").value = "";
+//   // Optionally, load a new question
+//   // loadQuestion();
+// } else {
+//   // Handle incorrect answer
+//   alert("Incorrect answer! Try again.");
+// }
 
 let currentPlayer = 1;
 let scores = { player1: 0, player2: 0 };
@@ -257,9 +258,7 @@ function switchPlayer() {
 }
 switchPlayer();
 window.onload = function () {
-  document.getElementById("switchPlayers1").textContent =
+  document.getElementById("player-turn").textContent =
     "Player 1 Please pick a card";
-  guessButton.disabled = true;
-  disableButtons();
 };
 export default placeholderQuestions;

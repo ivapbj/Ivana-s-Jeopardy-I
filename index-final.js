@@ -37,11 +37,13 @@ function giveRandomQuestion(questionsArr) {
 const final = document.getElementById("final-question");
 final.addEventListener("click", (e) => {
   final.textContent = giveRandomQuestion(finalCategory).question;
+
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
 const Nature100 = document.getElementById("Nature-100");
 Nature100.addEventListener("click", (e) => {
   Nature100.textContent = giveRandomQuestion(natureCategory).question;
+
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
 const Nature200 = document.getElementById("Nature-200");
