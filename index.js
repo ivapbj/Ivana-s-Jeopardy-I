@@ -193,19 +193,22 @@ function enableButtonsForGuessing() {
 
 //function to handle the submission of an answer
 function submitAnswer() {
-  console.log("fire");
   //grab the user's answer
-  const userAnswer = document.getElementById("answer").value.LowerCase();
+  const userAnswer = document.getElementById("answer-input").value.LowerCase();
   // find the correct answer based on the current question displayed
   const correctAnswer = placeholderQuestions.find(
     (q) =>
       q.question.toLowerCase() ===
-      document.getElementById("submitButton").innerText.toLowerCase()
+      document.getElementById("answer-input").innerText.toLowerCase()
   ).answer.toLowerCase;
-  console.log("correct answer: " + correctAnswer);
+  alert("Button clicked!");
+  document
+    .getElementById("submitButton")
+    .addEventListener("click, (e) => {
+      submitAnswer");
+
   let guesses = 0;
   if (userAnswer === correctAnswer) {
-    console.log("true user answer: " + userAnswer);
     alert("Correct Answer");
     //increment the score of the player
     scores[`players${currentPlayer}`] += 1;

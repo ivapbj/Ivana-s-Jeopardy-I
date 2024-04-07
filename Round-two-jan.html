@@ -68,8 +68,8 @@
       <form id="answer-form">
         <label for="answer-input">Enter your answer:</label>
         <input type="text" id="answer-input" name="answer" placeholder="Type answer here"/>
-        <button type="submit">Submit</button>
-        <button type="button" onclick="pass()">Pass</button> <!-- Assuming you have a function pass() defined in your JavaScript -->
+        <button id="submitButton" disabled type="button" onclick="submitAnswer()">Submit</button>
+        <button id="passButton" disabled type="button" onclick="pass()">Pass</button> 
       </form>
   
    
