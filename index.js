@@ -1,10 +1,10 @@
 import placeholderQuestions from "./placeholder-questions.js";
 
 let nextRoundButton = document.getElementById("nextRound");
-let answerText = document.getElementById("answerText");
+let submitAnswer = document.getElementById("testButton");
 
 let natureCategory = placeholderQuestions.filter(
-  (question) => question.category === "Nature"
+  (question) => question.category === "Animals"
 );
 let animalsCategory = placeholderQuestions.filter(
   (question) => question.category === "Animals"
@@ -39,14 +39,6 @@ Nature100.addEventListener("click", (e) => {
   Nature100.textContent = natureIndex.question;
   enableButtonsForGuessing();
   submitAnswerButton.setAttribute("data-answer-1", natureIndex.answer);
-});
-Nature100.addEventListener("click", (e) => {
-  setQuestionAndAnswer(
-    Nature100,
-    placeholderQuestions.filter((q) => q.category === "Nature")
-  );
-  // enableButtonsForGuessing();
-  //comapre the value to this data-answer-1
 });
 const Nature200 = document.getElementById("Nature-200");
 Nature200.addEventListener("click", (e) => {
@@ -286,79 +278,22 @@ function enableButtonsForGuessing() {
   finalRoundButton.disabled = false;
 }
 
-function submitAnswerButton() {}
-//function that doesnt allow other categories to be flipped until question answered
-const allCards = array.from(placeholderQuestions.querySelectorAll(".td"));
-allCards.forEach((td) => td.removeEventListener("click, on Card"));
-//function to handle the submission of an answer
-
-// let form = document.getElementById("answer-form");
-// form.addEventListener("submitButton", submitAnswer);
-// const answerSubmit = document.getElementById("submitButton");
-// answerSubmit.addEventListener("click", (e) => {
-//   console.log("fire");
-// });
-//grab the user's answer
-// const userAnswer = document.getElementById("answer-input").value.LowerCase();
-// // find the correct answer based on the current question displayed
-
-// let guesses = 0;
-// if (submitAnswer === correctAnswer) {
-//   alert("Correct Answer");
-//   //increment the score of the player
-//   scores[`players${currentPlayer}`] += 1;
-//   //update the display score
-//   document.getElementById("player" + currentPlayer + "-score").innerText =
-//     scores["player" + currentPlayer];
-//   guesses = 0;
-// } else {
-//   console.log("false user answer: " + userAnswer);
-//   scores[`players${currentPlayer}`] -= 1;
-//   //give alert for an incorrect answer
-//   guesses++;
-//   switchPlayer();
-//   if (guesses == 2) {
-//     guesses = 0;
-//     document.getElementById("answer").value = "";
-//     document.getElementById("question-container").style.display = "none";
-//     document.getElementById("categories").style.display = "flex";
-//     // document.getElementById("sumbitButton");
-//   }
-//   alert(`Incorrect Answer`);
-// }
-
-submitAnswer();
-//check if the user's answer  matches the correct answer
-// Validate and process the answer
-
-// if (validateAnswer(answer)) {
-//   // Update score
-//   updateScore(100); // For example, if the answer is correct, add 100 points
-//   // Clear the input field
-//   document.getElementById("answer-input").value = "";
-//   // Optionally, load a new question
-//   // loadQuestion();
-// } else {
-//   // Handle incorrect answer
-//   alert("Incorrect answer! Try again.");
-// }
-
-let currentPlayer = 1;
-let scores = { player1: 0, player2: 0 };
-
-function switchPlayer() {
-  if (currentPlayer === 1) {
-    currentPlayer = 2;
-  } else {
-    currentPlayer = 1;
-  }
-  document.getElementById(
-    "player-turn"
-  ).innerText = `Player ${currentPlayer}'s Turn`;
+function player1Turn() {
+  alert("Player 1 Turn");
+  // Call the function for Player 2 turn after a delay (e.g., 3 seconds)
+  setTimeout(player2Turn, 3000);
 }
-switchPlayer();
-window.onload = function () {
-  document.getElementById("player-turn").textContent =
-    "Player 1 Please pick a card";
-};
+
+// Function to show alert for Player 2
+function player2Turn() {
+  alert("Player 2 Turn");
+  // Call the function for Player 1 turn after a delay (e.g., 3 seconds)
+  setTimeout(player1Turn, 3000);
+}
+
+// Wait for the page to finish loading
+window.addEventListener("load", function () {
+  // Call the function for Player 1 turn when the page loads
+  player1Turn();
+});
 export default placeholderQuestions;
