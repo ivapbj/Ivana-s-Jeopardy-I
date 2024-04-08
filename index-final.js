@@ -43,7 +43,9 @@ final.addEventListener("click", (e) => {
 });
 const Nature100 = document.getElementById("Nature-100");
 Nature100.addEventListener("click", (e) => {
+  let natureIndex = giveRandomQuestion.natureCategory.[0]
   Nature100.textContent = giveRandomQuestion(natureCategory).question;
+  
 
   //if question visible dont let user do another question and allow input form and enable guess and pass buttons.
 });
