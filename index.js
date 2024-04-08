@@ -39,6 +39,13 @@ Nature100.addEventListener("click", (e) => {
   Nature100.textContent = natureIndex.question;
   enableButtonsForGuessing();
   submitAnswerButton.setAttribute("data-answer-1", natureIndex.answer);
+});
+Nature100.addEventListener("click", (e) => {
+  setQuestionAndAnswer(
+    Nature100,
+    placeholderQuestions.filter((q) => q.category === "Nature")
+  );
+  // enableButtonsForGuessing();
   //comapre the value to this data-answer-1
 });
 const Nature200 = document.getElementById("Nature-200");
